@@ -8,6 +8,8 @@
 /* ============================================
    STEP 1: BASE RESET & TYPOGRAPHY
 ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -15,75 +17,80 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lato', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #2d1a1a;
+    background-color: #f2eeec;
     padding: 20px;
 }
 
 /* ============================================
    STEP 2: MAIN CONTAINER
-   — white bg, max 960px, centered, GREEN border
+   — cream bg, 960px, centered, burgundy border
 ============================================ */
 #main-container {
-    background-color: white;
+    background-color: #faf7f5;
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    border: 4px solid #4caf50;   /* green outer border */
+    border: 4px solid #6d1a2e;
     border-radius: 6px;
 }
 
 /* ============================================
    STEP 3: HEADER
-   — light cyan bg, dark text, RED border
+   — deep burgundy bg, cream text, dark red border
 ============================================ */
 #header-box {
-    background-color: #e0f7f7;
-    color: #2c3e50;
-    padding: 20px 30px;
+    background-color: #6d1a2e;
+    color: #faf7f5;
+    padding: 24px 30px;
     text-align: right;
-    border: 2px solid #e74c3c;   /* red border */
+    border: 2px solid #3d0d19;
     border-radius: 4px;
     margin-bottom: 20px;
-    position: relative;
 }
 
 #header-box h1 {
-    font-size: 2em;
-    font-weight: bold;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 0.01em;
     display: inline;
+    color: #faf7f5;
 }
 
 #header-box .tagline {
     font-style: italic;
-    color: #555;
+    color: #e8c9d0;
     text-align: right;
     display: block;
-    margin-top: 4px;
+    margin-top: 6px;
+    font-size: 0.95em;
+    letter-spacing: 0.03em;
 }
 
 /* ============================================
    STEP 4: TWO-COLUMN FLOAT LAYOUT
-   — sidebar dark grey, content floats right
+   — sidebar dark burgundy, content floats right
 ============================================ */
 #sidebar {
     float: left;
     width: 25%;
     padding: 16px;
-    background-color: #4a5568;   /* dark grey */
-    color: white;
+    background-color: #3d0d19;
+    color: #faf7f5;
     border-radius: 4px;
     min-height: 300px;
 }
 
 #sidebar h2 {
-    color: white;
-    font-size: 1.05em;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #e8c9d0;
+    font-size: 1.1em;
     margin-bottom: 10px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #718096;
+    border-bottom: 1px solid #6d1a2e;
 }
 
 .friends-list {
@@ -93,9 +100,9 @@ body {
 
 .friends-list li {
     padding: 7px 0;
-    border-bottom: 1px solid #718096;
-    font-size: 0.95em;
-    color: #e2e8f0;
+    border-bottom: 1px solid #6d1a2e;
+    font-size: 0.92em;
+    color: #e8c9d0;
 }
 
 .friends-list li:last-child {
@@ -119,17 +126,16 @@ body {
 
 /* ============================================
    STEP 6: JOURNAL ENTRIES
-   — light blue bg, cyan border, image floats RIGHT
+   — warm cream bg, burgundy border, image RIGHT
 ============================================ */
 .journal-entry {
-    background-color: #e8f6f8;
+    background-color: #fff8f6;
     margin-bottom: 16px;
     padding: 16px;
-    border: 2px solid #5bc8d4;
+    border: 2px solid #b05070;
     border-radius: 6px;
 }
 
-/* Clearfix inside each entry card */
 .journal-entry::after {
     content: "";
     display: table;
@@ -137,18 +143,20 @@ body {
 }
 
 .entry-title {
-    color: #2980b9;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #6d1a2e;
     margin-bottom: 12px;
-    font-size: 1.1em;
+    font-size: 1.15em;
+    font-weight: 700;
     padding-bottom: 8px;
-    border-bottom: 1px solid #5bc8d4;
+    border-bottom: 1px solid #b05070;
 }
 
 .entry-image {
-    float: right;              /* RIGHT — matches screenshot */
+    float: right;
     margin-left: 15px;
     margin-bottom: 10px;
-    border: 3px solid #333;   /* dark frame */
+    border: 3px solid #6d1a2e;
     max-width: 160px;
     height: auto;
     display: block;
@@ -157,6 +165,7 @@ body {
 .entry-content p {
     margin-bottom: 10px;
     font-size: 0.95em;
+    color: #2d1a1a;
 }
 
 /* ============================================
@@ -166,10 +175,11 @@ body {
     clear: both;
     text-align: center;
     padding: 14px;
-    color: #888;
+    color: #9e6070;
     font-size: 0.88em;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #c08090;
     margin-top: 10px;
+    font-style: italic;
 }
 
 /* ============================================
