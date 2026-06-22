@@ -1,0 +1,209 @@
+/* ============================================
+   HENRY'S JOURNAL - CSS POSITIONING EXERCISE
+   ============================================
+   Author: Henry
+   Date: 02/02/2026
+============================================ */
+
+/* ============================================
+   STEP 1: BASE RESET & TYPOGRAPHY
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* ============================================
+   STEP 2: MAIN CONTAINER
+   — white bg, max 960px, centered, GREEN border
+============================================ */
+#main-container {
+    background-color: white;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 4px solid #4caf50;   /* green outer border */
+    border-radius: 6px;
+}
+
+/* ============================================
+   STEP 3: HEADER
+   — light cyan bg, dark text, RED border
+============================================ */
+#header-box {
+    background-color: #e0f7f7;
+    color: #2c3e50;
+    padding: 20px 30px;
+    text-align: right;
+    border: 2px solid #e74c3c;   /* red border */
+    border-radius: 4px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#header-box h1 {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline;
+}
+
+#header-box .tagline {
+    font-style: italic;
+    color: #555;
+    text-align: right;
+    display: block;
+    margin-top: 4px;
+}
+
+/* ============================================
+   STEP 4: TWO-COLUMN FLOAT LAYOUT
+   — sidebar dark grey, content floats right
+============================================ */
+#sidebar {
+    float: left;
+    width: 25%;
+    padding: 16px;
+    background-color: #4a5568;   /* dark grey */
+    color: white;
+    border-radius: 4px;
+    min-height: 300px;
+}
+
+#sidebar h2 {
+    color: white;
+    font-size: 1.05em;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #718096;
+}
+
+.friends-list {
+    list-style: none;
+    padding: 0;
+}
+
+.friends-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid #718096;
+    font-size: 0.95em;
+    color: #e2e8f0;
+}
+
+.friends-list li:last-child {
+    border-bottom: none;
+}
+
+#content-area {
+    float: left;
+    width: 75%;
+    padding: 0 0 0 20px;
+}
+
+/* ============================================
+   STEP 5: CLEARFIX — FIX PARENT COLLAPSE
+============================================ */
+#main-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   STEP 6: JOURNAL ENTRIES
+   — light blue bg, cyan border, image floats RIGHT
+============================================ */
+.journal-entry {
+    background-color: #e8f6f8;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 2px solid #5bc8d4;
+    border-radius: 6px;
+}
+
+/* Clearfix inside each entry card */
+.journal-entry::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.entry-title {
+    color: #2980b9;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #5bc8d4;
+}
+
+.entry-image {
+    float: right;              /* RIGHT — matches screenshot */
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border: 3px solid #333;   /* dark frame */
+    max-width: 160px;
+    height: auto;
+    display: block;
+}
+
+.entry-content p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+#footer {
+    clear: both;
+    text-align: center;
+    padding: 14px;
+    color: #888;
+    font-size: 0.88em;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* ============================================
+   STEP 7: RESPONSIVE MEDIA QUERY
+============================================ */
+@media (max-width: 768px) {
+
+    #main-container {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    #sidebar,
+    #content-area {
+        float: none;
+        width: 100%;
+    }
+
+    #sidebar {
+        margin-bottom: 20px;
+        min-height: auto;
+    }
+
+    #content-area {
+        padding: 0;
+    }
+
+    .entry-image {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+        max-width: 100%;
+    }
+
+}
